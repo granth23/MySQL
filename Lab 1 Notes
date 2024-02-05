@@ -1,0 +1,21 @@
+Tablespace is a divided unit of a database defining just the database storage location.
+
+One tablespace may store objects related to different schemas and one schema may have its objects in multiple tablespaces.
+
+Each tablespace will have one or more data files. 
+
+sudo systemctl start oracle-xe
+sqlplus
+
+User: system
+Password: manager
+
+create user granth identified by f20220217 default tablespace users temporary tablespace temp;
+
+grant connect to granth;
+grant create table to granth;
+alter user granth quota unlimited on users;
+
+connect granth/f20220217
+the above is for direct connection without exiting and then reconnecting
+
