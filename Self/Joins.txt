@@ -1,0 +1,10 @@
+All rows of Student are multiplied with all rows of Stream
+Student: 4 Rows, 6 Columns. Stream: 3 Rows, 2 Columns.
+Result is 12 Rows and 8 Columns.
+SELECT * FROM STUDENT, STREAM
+SELECT * FROM STUDENT NATURAL JOIN STREAM
+
+
+In case of equi joins we equate the columns of the table
+SELECT * FROM STUDENT, STREAM WHERE STUDENT.STREAM = STREAM.SID
+SELECT * FROM STUDENT JOIN STREAM ON STUDENT.STREAM = STREAM.SID
